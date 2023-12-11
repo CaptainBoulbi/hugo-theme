@@ -4,8 +4,8 @@ date: {{ .Date }}
 status: "Development"
 categories: ["cli"]
 summary: "c'est genial"
-progress: 10%
-github: https://github.com/CaptainBoulbi/webbb
+progress: 10
+github: https://github.com/CaptainBoulbi/hugo-theme
 draft: true
 ---
 
