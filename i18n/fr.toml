@@ -1,0 +1,14 @@
+[footer]
+  other = 'Si tu aimes ce que tu lit soit libre de faire un dons, plus d&rsquoinfo sur la page <a href="/fr/about">a propos</a>.'
+[home]
+  other = 'Accueil'
+[project]
+  other = 'Projet'
+[game]
+  other = 'Jeu'
+[about]
+  other = 'A Propos'
+[github]
+  other = "page Github"
+[progress]
+  other = "Progres"

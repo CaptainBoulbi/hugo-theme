@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="alternate" type="application/rss+xml" href="//index.xml" title="n3m0">
+  </head>
+  <body>
+    {{ block "header" . }}
+    {{ partial "header" . }}
+    {{ end }}
+
+    <main>
+      {{ block "main" . }}
+      <p>content not found.</p>
+      <a href="/">return to main menu.</a>
+      {{ end }}
+    </main>
+
+    {{ block "footer" . }}
+    {{ partial "footer" . }}
+    {{ end }}
+  </body>
+</html>

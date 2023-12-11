@@ -1,0 +1,16 @@
+<rss version="2.0">
+<channel>
+  <title>{{ .Site.Title }} - {{ .Site.Language }}</title>
+  <link>{{ .Site.BaseURL }}</link>
+  <description>Recent content of {{ .Site.Title }} page.</description>
+  {{ range where (where .Site.RegularPages "Type" "blog") "File.Dir" "blog/" }}
+  <item>
+    <title>{{ .Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <pubDate>{{ .Params.date }}</pubDate>
+    <guid>{{ .Permalink }}</guid>
+    <description>{{ .Content | transform.XMLEscape | safeHTML }}</description>
+  </item>
+  {{ end }}
+</channel>
+</rss> 

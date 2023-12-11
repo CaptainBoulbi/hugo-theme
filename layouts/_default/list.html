@@ -1,0 +1,43 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ range .Pages }}
+<article>
+  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  {{ if isset .Params "date" }}
+  <time datetime="{{ .Params.date }}">({{ time.Format "2 Jan 2006" .Params.date }})</time>
+  {{ end }}
+  {{ if isset .Params.tags 0 }}
+  <p>{{ .ReadingTime }} minute{{ if (ne .ReadingTime 1) }}s{{ end }}</p>
+  {{ end }}
+
+  {{ if isset .Params "status" }}
+  <p>Status: <strong>{{ .Params.status }}</strong></p>
+  {{ end }}
+  <p>{{ .Params.summary }}...</p>
+  <a href="{{ .RelPermalink }}">Read More.</a>
+  <p>
+    {{ if isset .Params.tags 0 }}
+    Tags:
+    {{ range .Params.tags }}
+    <a href="/{{ $.Site.Language }}/tags/{{ . }}">{{ . }}</a>
+    {{ end }}
+    {{ end }}
+
+    {{ if isset .Params.themes 0 }}
+    Themes:
+    {{ range .Params.themes }}
+    <a href="/{{ $.Site.Language }}/themes/{{ . }}">{{ . }}</a>
+    {{ end }}
+    {{ end }}
+
+    {{ if isset .Params.categories 0 }}
+    Categories:
+    {{ range .Params.categories }}
+    <a href="/{{ $.Site.Language }}/categories/{{ . }}">{{ . }}</a>
+    {{ end }}
+    {{ end }}
+  </p>
+</article>
+{{ end }}
+{{ end }}
