@@ -14,3 +14,9 @@
   other = "Progress"
 [readmore]
   other = "Read More"
+[listtag]
+  other = "List of tags :"
+[listtheme]
+  other = "List of themes :"
+[listcategorie]
+  other = "List of categories :"

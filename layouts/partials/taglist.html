@@ -1,0 +1,45 @@
+{{ if or (strings.Contains .RelPermalink "blog") (strings.Contains .RelPermalink "tags") }}
+<hr>
+<h3>{{ i18n "listtag" }}</h3>
+<section>
+{{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+  {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+  <tag>
+    <span>{{$cnt}}</span>
+    <a href="{{ .RelPermalink }}">{{$name}}</a>
+  </tag>
+  {{end}}
+{{end}}
+</section>
+<hr>
+{{end}}
+{{ if or (strings.Contains .RelPermalink "game") (strings.Contains .RelPermalink "themes") }}
+<hr>
+<h3>{{ i18n "listtheme" }}</h3>
+<section>
+{{range $name, $taxonomy := .Site.Taxonomies.themes}} {{ $cnt := .Count }}
+  {{ with $.Site.GetPage (printf "/themes/%s" $name) }}
+  <tag>
+    <span>{{$cnt}}</span>
+    <a href="{{ .RelPermalink }}">{{$name}}</a>
+  </tag>
+  {{end}}
+{{end}}
+</section>
+<hr>
+{{end}}
+{{ if or (strings.Contains .RelPermalink "project") (strings.Contains .RelPermalink "categories") }}
+<hr>
+<h3>{{ i18n "listcategorie" }}</h3>
+<section>
+{{range $name, $taxonomy := .Site.Taxonomies.categories}} {{ $cnt := .Count }}
+  {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
+  <tag>
+    <span>{{$cnt}}</span>
+    <a href="{{ .RelPermalink }}">{{$name}}</a>
+  </tag>
+  {{end}}
+{{end}}
+</section>
+<hr>
+{{end}}

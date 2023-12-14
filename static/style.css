@@ -134,3 +134,19 @@ p:has(+ progress) {
   margin-bottom: 0rem;
   font-weight: bold;
 }
+
+tag {
+  border: solid #cecece 0.1rem;
+  border-radius: 7px;
+  padding: 0.2rem;
+  margin-right: 0.7rem;
+}
+
+tag > span {
+  font-weight: bold;
+}
+
+section + hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
