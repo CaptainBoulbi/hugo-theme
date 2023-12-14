@@ -15,7 +15,7 @@
   <p>Status: <strong>{{ .Params.status }}</strong></p>
   {{ end }}
   <p>{{ .Params.summary }}...</p>
-  <a href="{{ .RelPermalink }}">Read More.</a>
+  <a href="{{ .RelPermalink }}">{{ i18n "readmore" }}.</a>
   <p>
     {{ if isset .Params.tags 0 }}
     Tags:
