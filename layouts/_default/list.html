@@ -4,7 +4,7 @@
 {{ partial "taglist.html" . }}
 {{ range .Pages }}
 <article>
-  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
   {{ if isset .Params "date" }}
   <time datetime="{{ .Params.date }}">({{ time.Format "2 Jan 2006" .Params.date }})</time>
   {{ end }}
