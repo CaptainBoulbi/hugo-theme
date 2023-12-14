@@ -2,13 +2,11 @@
 <hr>
 <h3>{{ i18n "listtag" }}</h3>
 <section>
-{{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
-  {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-  <tag>
-    <span>{{$cnt}}</span>
-    <a href="{{ .RelPermalink }}">{{$name}}</a>
-  </tag>
-  {{end}}
+{{ range $.Site.Taxonomies.tags.ByCount }}
+<tag>
+  <span>{{ .Count }}</span>
+  <a href="/{{ $.Site.Language }}/tags/{{ .Name }}">{{ .Name }}</a>
+</tag>
 {{end}}
 </section>
 <hr>
@@ -17,13 +15,11 @@
 <hr>
 <h3>{{ i18n "listtheme" }}</h3>
 <section>
-{{range $name, $taxonomy := .Site.Taxonomies.themes}} {{ $cnt := .Count }}
-  {{ with $.Site.GetPage (printf "/themes/%s" $name) }}
-  <tag>
-    <span>{{$cnt}}</span>
-    <a href="{{ .RelPermalink }}">{{$name}}</a>
-  </tag>
-  {{end}}
+{{ range $.Site.Taxonomies.themes.ByCount }}
+<tag>
+  <span>{{ .Count }}</span>
+  <a href="/{{ $.Site.Language }}/themes/{{ .Name }}">{{ .Name }}</a>
+</tag>
 {{end}}
 </section>
 <hr>
@@ -32,13 +28,11 @@
 <hr>
 <h3>{{ i18n "listcategorie" }}</h3>
 <section>
-{{range $name, $taxonomy := .Site.Taxonomies.categories}} {{ $cnt := .Count }}
-  {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
-  <tag>
-    <span>{{$cnt}}</span>
-    <a href="{{ .RelPermalink }}">{{$name}}</a>
-  </tag>
-  {{end}}
+{{ range $.Site.Taxonomies.categories.ByCount }}
+<tag>
+  <span>{{ .Count }}</span>
+  <a href="/{{ $.Site.Language }}/categories/{{ .Name }}">{{ .Name }}</a>
+</tag>
 {{end}}
 </section>
 <hr>
