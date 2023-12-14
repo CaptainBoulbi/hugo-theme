@@ -7,3 +7,6 @@
   from = “/fr/*”
   to = “/fr/404/”
   status = 404
+
+[context.production.environment]
+  HUGO_VERSION = "0.121.0"
