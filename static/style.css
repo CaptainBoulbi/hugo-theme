@@ -112,8 +112,8 @@ article {
   margin-bottom: 1rem;
 }
 
-article > h3 {
-  margin-top: 0rem;
+article > a:first-child {
+  font-size: 1.3rem;
 }
 
 article > p {
