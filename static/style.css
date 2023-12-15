@@ -149,18 +149,28 @@ p:has(+ progress) {
   font-weight: bold;
 }
 
-tag {
+var {
   border: solid #cecece 0.1rem;
   border-radius: 7px;
   padding: 0.2rem;
   margin-right: 0.7rem;
+  margin-bottom: 0.7rem;
 }
 
-tag > span {
+var > span {
   font-weight: bold;
 }
 
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 section + hr {
-  margin-top: 1rem;
+  margin-top: 0rem;
   margin-bottom: 1rem;
+}
+
+article > p > a {
+  font-style: italic;
 }

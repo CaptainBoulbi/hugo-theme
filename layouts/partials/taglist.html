@@ -3,10 +3,10 @@
 <h3>{{ i18n "listtag" }}</h3>
 <section>
 {{ range $.Site.Taxonomies.tags.ByCount }}
-<tag>
+<var>
   <span>{{ .Count }}</span>
   <a href="/{{ $.Site.Language }}/tags/{{ .Name }}">{{ .Name }}</a>
-</tag>
+</var>
 {{end}}
 </section>
 <hr>
@@ -16,10 +16,10 @@
 <h3>{{ i18n "listtheme" }}</h3>
 <section>
 {{ range $.Site.Taxonomies.themes.ByCount }}
-<tag>
+<var>
   <span>{{ .Count }}</span>
   <a href="/{{ $.Site.Language }}/themes/{{ .Name }}">{{ .Name }}</a>
-</tag>
+</var>
 {{end}}
 </section>
 <hr>
@@ -29,10 +29,10 @@
 <h3>{{ i18n "listcategorie" }}</h3>
 <section>
 {{ range $.Site.Taxonomies.categories.ByCount }}
-<tag>
+<var>
   <span>{{ .Count }}</span>
   <a href="/{{ $.Site.Language }}/categories/{{ .Name }}">{{ .Name }}</a>
-</tag>
+</var>
 {{end}}
 </section>
 <hr>
