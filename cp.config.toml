@@ -1,6 +1,6 @@
 baseURL = 'http://localhost:1313'
 theme = "based"
-defaultContentLanguage = 'en'
+defaultContentLanguage = 'fr'
 defaultContentLanguageInSubdir = true
 [languages]
   [languages.fr]
