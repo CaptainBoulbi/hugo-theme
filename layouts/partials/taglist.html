@@ -1,6 +1,6 @@
 {{ if or (strings.Contains .RelPermalink "blog") (strings.Contains .RelPermalink "tags") }}
 <hr>
-<h3>{{ i18n "listtag" }}</h3>
+<h2>{{ i18n "listtag" }}</h2>
 <section>
 {{ range $.Site.Taxonomies.tags.ByCount }}
 <var>
