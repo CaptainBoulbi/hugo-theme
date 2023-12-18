@@ -13,7 +13,7 @@
 {{end}}
 {{ if or (strings.Contains .RelPermalink "game") (strings.Contains .RelPermalink "themes") }}
 <hr>
-<h3>{{ i18n "listtheme" }}</h3>
+<h2>{{ i18n "listtheme" }}</h2>
 <section>
 {{ range $.Site.Taxonomies.themes.ByCount }}
 <var>
@@ -26,7 +26,7 @@
 {{end}}
 {{ if or (strings.Contains .RelPermalink "project") (strings.Contains .RelPermalink "categories") }}
 <hr>
-<h3>{{ i18n "listcategorie" }}</h3>
+<h2>{{ i18n "listcategorie" }}</h2>
 <section>
 {{ range $.Site.Taxonomies.categories.ByCount }}
 <var>
