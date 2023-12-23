@@ -201,7 +201,7 @@ article > p > a {
     margin-right: 0;
   }
 
-  header:has(> img:last-child:hover) > menu {
+  header:has(> img:last-child:hover, > img:last-child:active) > menu {
     display: block;
 
     margin-left: auto;
@@ -219,11 +219,11 @@ article > p > a {
     text-align: right;
   }
 
-  header:has(> img:last-child:hover) {
+  header:has(> img:last-child:hover, > img:last-child:active) {
     white-space: pre-line;
   }
 
-  header > img:last-child:hover {
+  header > img:last-child:hover, header > img:last-child:active {
     display: none;
   }
 
