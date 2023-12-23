@@ -219,7 +219,7 @@ article > p > a {
     text-align: right;
   }
 
-  header:has(> img:last-child:hover {
+  header:has(> img:last-child:hover) {
     white-space: pre-line;
   }
 
