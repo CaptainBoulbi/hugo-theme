@@ -183,6 +183,10 @@ article > p > a {
 
 @media screen and (max-width: 950px) {
 
+  html {
+    position: absolute
+  }
+
   main {
     width: 100%;
   }
