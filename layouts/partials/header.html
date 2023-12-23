@@ -2,6 +2,7 @@
 <header>
   <img src="/img/logo.png" alt="logo"></img>
   <menu>
+    <label for="menu-burger"><img src="/img/menu-burger-close.png" alt="menu-burger-close"></img></label>
     <a href="/{{ .Site.Language }}">{{ i18n "home" }}</a>
     <a href="/{{ .Site.Language }}/portfolio">Portfolio</a>
     <a href="/{{ .Site.Language }}/project">{{ i18n "project" }}</a>
@@ -10,6 +11,7 @@
     <a href="/{{ .Site.Language }}/about">{{ i18n "about" }}</a>
   </menu>
   <a href='/{{ $notlang }}{{ substr .RelPermalink 3 }}'>{{ $notlang }}</a>
-  <img src="/img/menu-burger.png" alt="menu-burger"></img>
+  <input type="checkbox" id="menu-burger"></input>
+  <label for="menu-burger"><img src="/img/menu-burger.png" alt="menu-burger"></img></label>
 </header>
 <hr>

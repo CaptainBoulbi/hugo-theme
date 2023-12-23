@@ -107,7 +107,7 @@ header > img {
   margin: 0rem;
 }
 
-header > img:last-child {
+header > input, header > label, menu > label {
   display: none;
 }
 
@@ -187,24 +187,33 @@ article > p > a {
     width: 100%;
   }
 
-  header > menu, header > a {
+  header > a {
+    display: block;
+    margin-left: 1rem;
+  }
+
+  header > menu {
     display: none;
   }
 
-  header > img:last-child {
+  header > label, menu > label {
     display: block;
-
-    width: 50px;
-    height: 50px;
 
     margin: auto;
     margin-right: 0;
   }
 
-  header:has(> img:last-child:hover, > img:last-child:active) > menu {
-    display: block;
+  header > label > img, menu > label > img {
+    width: 50px;
+    height: 50px;
+  }
 
-    margin-left: auto;
+  header:has(> input:checked) > menu {
+    display: block;
+    position: absolute;
+
+    background-color: #000000;
+    margin-left: calc(100% - 130px);
 
     width: 7rem;
     height: auto;
@@ -219,17 +228,17 @@ article > p > a {
     text-align: right;
   }
 
-  header:has(> img:last-child:hover, > img:last-child:active) {
+  header:has(> input:checked) {
     white-space: pre-line;
   }
 
-  header > img:last-child:hover, header > img:last-child:active {
+  header > input:checked + label {
     display: none;
   }
 
   footer > hr + span{
-    border: solid red;
-    width: 50%;
+    float: left;
+    width: 60%;
   }
 
 }
