@@ -4,11 +4,10 @@
   <menu>
     <label for="menu-burger"><img src="/img/menu-burger-close.png" alt="menu-burger-close"></img></label>
     <a href="/{{ .Site.Language }}">{{ i18n "home" }}</a>
-    <a href="/{{ .Site.Language }}/portfolio">Portfolio</a>
     <a href="/{{ .Site.Language }}/project">{{ i18n "project" }}</a>
     <a href="/{{ .Site.Language }}/game">{{ i18n "game" }}</a>
-    <a href="/{{ .Site.Language }}/blog">Blog</a>
     <a href="/{{ .Site.Language }}/about">{{ i18n "about" }}</a>
+    <a href="/CV.pdf">CV</a>
   </menu>
   <a href='/{{ $notlang }}{{ substr .RelPermalink 3 }}'>{{ $notlang }}</a>
   <input type="checkbox" id="menu-burger"></input>
